@@ -23,6 +23,14 @@ function smaller(image,width){
         // var bottom = document.getElementById('alice').style.bottom;
         if (width == 110){
             alert("Alice is now small enough to go through the door")
+            document.getElementById("alice").style.display = "none";
+            document.getElementById("bottle").style.display = "none";
+            document.getElementById("cookie").style.display = "none";
+            var img3 = document.createElement("img");
+            img3.src = "media/second.gif" ;
+            img3.id="secondgif";
+            img3.setAttribute('onclick', 'animation2()')
+            document.body.appendChild(img3);
         }
         else{
             image.style.width = (width - 100) + "px";
@@ -39,4 +47,8 @@ function bigger(image,width){
     else{
         image.style.width = (width + 100) + "px";
     }
+}
+
+function animation2(){
+    document.getElementById("secondgif").style.display = "none";
 }
